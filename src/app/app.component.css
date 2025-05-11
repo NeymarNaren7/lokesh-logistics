@@ -1,26 +1,73 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin:0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    position: sticky;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-image: linear-gradient(#ffffff, #9b9b9b);
+  height: 75px;
+  border: 1px solid black;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #3a842e;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.navbar-links li a:hover,
+.navbar-links li a:active {
+  color: #073858;
+}
+
+.navbar img.logo {
+  height: 70px;
+  width: 70px;
+  margin:0;
+  padding: 0;
+}
+
+.jamari-logistics {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: #3a842e;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
   
- .navbar{
-    background-image: linear-gradient(#a6a6a6, #ffffff);
-    height: 80px;
-    border: 1px solid black;
-    margin: 0px;
-    padding: 0px;
+.navbar-nav .nav-link {
+  color: #333;
+  padding: 10px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ff7f00; /* Change color on hover */
+}
+  [id] {
+    scroll-margin-top: 75px; /* Adjust this value based on your navbar height */
   }
 
-  .navbar img.logo {
-    margin: 0px;
-    padding: 0px;
-    height: 75px;
-    width: 75px;
-    background-color: transparent;
+  html {
+    scroll-behavior: smooth;
   }
   
   .navbar ul {
@@ -36,31 +83,18 @@
   }
 
   .navbar ul li a:hover, .navbar ul li a:active{
-    color:#073858;
+    color:#ffffff;
   }
   
   .navbar ul li a {
     text-decoration: none;
-    color: #f4854f;
+    color: #3a842e;
     font-weight: bold;
   }
 
-  .jamari-logistics{
-    text-transform: uppercase;
-    justify-content: space-between;
-    word-spacing: 5px;
-    color:#f4854f;
-  }
-
-  #second-text{
+  #second-text, .text-blue{
     color:#073858;
-  }
-
-.jamari-logistics {
-    font-family: verdana;
-    font-size: 14px;
     font-weight: bold;
-    letter-spacing: 3px;
   }
 
 .main-content{
@@ -77,11 +111,11 @@
   background-color: #ffffff;
 }
 .mat-button:hover{
-  background-color: #f4854f;
+  background-color: #3a842e;
 }
 .about-section {
   position: relative;
-  background-color: #a6a6a6;
+  background-color: #9b9b9b;
   padding-bottom: 150px;
 }
 
@@ -92,15 +126,11 @@
   bottom: 0;
   width: 100%;
   height: 150px;
-  z-index: -1;
 }
 
 .text-orange {
-  color: #f26522;
-}
-
-.text-blue{
-  color:#073858;
+  color: #3a842e;
+  font-weight: bold;
 }
 
 .container{
@@ -113,6 +143,25 @@
   padding: 60px 0;
   color: white;
 }
+@media (max-width: 991px) {
+  .navbar-collapse {
+    text-align: right;
+  }
+  .navbar-nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    background-color: #003c46;
+    width: 100px;
+    text-align: center;
+    border: 1px solid black;
+    padding-right: 10px !important;
+    margin-right: -32px !important;
+    margin-top: -1px !important;
+  }
+}
+
 
 .check-icon {
   width: 24px;
@@ -133,7 +182,7 @@ p {
   color: #1dc517;
 }
 .services-section{  
-  background-color: #a6a6a6;
+  background-color: #9b9b9b;
 }
 
 .services-grid {
@@ -221,7 +270,7 @@ p {
   }
 
   span {
-    color: #f26522;
+    color: #3a842e;
   }
 
   p {
@@ -261,7 +310,7 @@ p {
     }
 
     p:nth-of-type(2) {
-      color: #f26522;
+      color: #3a842e;
       font-weight: bold;
     }
   }
@@ -294,7 +343,7 @@ p {
   }
 
   .contact a[href^="mailto"], .contact a[href^="tel"] {
-    color: #f26522;
+    color: #3a842e;
     font-weight: 500;
     display: block;
     margin-top: 4px;
@@ -316,7 +365,7 @@ p {
   }
 
   .links a:hover {
-    color: #f26522;
+    color: #3a842e;
   }
 
   .social-icons a {
@@ -353,6 +402,6 @@ p {
   background-color: #fff;
 }
 
-
-
-
+.quicklinks{
+  font-size: 12px;
+}
